@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 from gtts import gTTS
-from playsound import playsound
+
 
 # Load the model and vectorizer
 model = pickle.load(open("spam.pkl", "rb"))
@@ -32,7 +32,7 @@ def main():
     if result == 1:
 
       st.error("This is a spam mail")
-      playsound("welcome.mp3")
+      
 
     else:
       st.success("This is a ham mail")
